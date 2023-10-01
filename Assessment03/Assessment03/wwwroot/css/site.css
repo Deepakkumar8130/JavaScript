@@ -1,0 +1,74 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+/* Style for the card container */
+.card {
+    border: 2px solid #007BFF; /* Add a border with a blue color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    max-width: 400px; /* Set a maximum width for the card */
+    margin: 0 auto; /* Center the card horizontally */
+    padding: 20px; /* Add some padding inside the card */
+}
+
+/* Style for the card header */
+.card-header {
+    background-color: #007BFF; /* Blue background color */
+    color: #fff; /* White text color */
+    padding: 10px; /* Add some padding to the header */
+    border-top-left-radius: 10px; /* Rounded top-left corner */
+    border-top-right-radius: 10px; /* Rounded top-right corner */
+}
+
+    /* Style for the h1 inside the card header */
+    .card-header h1 {
+        margin: 0; /* Remove margin for the h1 element */
+    }
+
+/* Style for the form inside the card body */
+.card-body form {
+    margin: 0; /* Remove margin for the form element */
+}
+
+/* Style for the form group */
+.form-group {
+    margin-bottom: 15px; /* Add some spacing between form groups */
+}
+
+/* Style for labels */
+label {
+    font-weight: bold; /* Make labels bold */
+}
+
+/* Style for the input field */
+input[type="number"] {
+    width: 100%; /* Make the input field take up the full width */
+    padding: 10px; /* Add some padding to the input field */
+    border: 1px solid #ccc; /* Add a border with a light gray color */
+    border-radius: 5px; /* Rounded corners for the input field */
+    outline: none; /* Remove the default outline on focus */
+}
+
+    /* Style for the input field when focused */
+    input[type="number"]:focus {
+        border-color: #007BFF; /* Change the border color on focus to blue */
+    }
+.mark{
+    background-color:white;
+}
