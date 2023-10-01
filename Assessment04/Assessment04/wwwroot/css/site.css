@@ -1,0 +1,53 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.card {
+    width: 50%;
+    margin: auto;
+    border-radius:20px;
+    padding:20px;
+}.card-header {
+    background-color:dodgerblue;
+    color:white;
+    border-radius:25px;
+}
+
+.booklist {
+    background-color: #c6ebed;
+    border-radius: 15px;
+    padding:1px
+}
+label{
+    font-weight:bold;
+}
+.close{
+    float:right;
+    text-decoration:none;
+    color:red;
+    cursor:pointer;
+}
+
+#list li {
+    width: 100%;
+    font-weight: bold;
+    margin: 10px 0px;
+    color: #24959e;
+    padding: 3px;
+    background-color: #e3eced;
+}
