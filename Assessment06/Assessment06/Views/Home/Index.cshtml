@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <form>
+                <div class="card">
+                    <div class="card-header">
+                    <h1>Sign Up</h1>
+                    </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Username</label><br />
+                                <input id="txtName" class="form-control" type="text" />
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label><br />
+                                <input id="txtEmail" class="form-control" type="email" />
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label><br />
+                                <div class="input-group">
+                                    <input id="txtPassword" class="form-control" type="password" />
+                                    <div id="showPassword" class="input-group-append">
+                                        <span class="input-group-text">
+                                            <i id="password-toggle" class="fas fa-eye"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group d-flex justify-content-between">
+                                <button class="mt-2 btn btn-info w-50" type="button">Submit</button><br />
+                                <button class="mt-2 btn btn-sm btn-secondary" type="button" id="suggestion">Auto-Generate</button>
+                            </div>
+
+                            <div class="mt-4">
+                                <ul id="txtPasswords">
+                                </ul>
+                        </div>
+                    </div>
+                 </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="~/js/custom.js"></script>
