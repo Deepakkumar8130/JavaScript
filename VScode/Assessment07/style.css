@@ -1,0 +1,54 @@
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.bubble {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    animation: moveCircle 4s ease-in-out infinite;
+}
+
+#b1 {
+    border: 2px solid red;
+}
+#b2 {
+    border: 2px solid blue;
+}
+
+#b3 {
+    border: 2px solid green;
+}
+#b4 {
+    border: 2px solid yellow;
+}
+#b5 {
+    border: 2px solid pink;
+}
+
+@keyframes moveCircle {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(calc(100% - 50px), 0);
+    }
+
+    50% {
+        transform: translate(calc(100% - 50px), calc(100% - 50px));
+    }
+
+    75% {
+        transform: translate(0, calc(100% - 50px));
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}

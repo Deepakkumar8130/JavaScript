@@ -24,7 +24,7 @@ function passwordGenerator() {
     var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var lowerCase = "abcdefghijklmnopqrstuvwxyz";
     var numChars = "0123456789";
-    var specialChars = "!@#$%^&*()_-+=<>?";
+    var specialChars = "~`! @#$%^&*()_-+={[}]|\:;\"'<,>.?/";
     var passwordLen = 16;
     var password = "";
     password += userName.substring(0, 3);
@@ -41,10 +41,10 @@ function passwordGenerator() {
     }
 
     password = shuffleString(password);
-    if (password.length != 16) {
-        passwordGenerator();
-    }
-    return password;
+    
+    console.log(password)
+    console.log(password.length)
+    return password.toString();
 }
 
 
@@ -66,10 +66,10 @@ function shuffleString(str) {
 }
 
 function fillPassword(e) {
-    if (e.target && e.target.className === "password-li") {
+    
         var selectPassword = e.target.textContent;
         document.getElementById("txtPassword").value = selectPassword;
-    }
+    
 }
 
 function togglePassword() {

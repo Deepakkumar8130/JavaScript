@@ -17,3 +17,12 @@ body {
   margin-bottom: 60px;
 }
 
+#input-eye {
+    height: 36px;
+}
+
+#txtPasswords li{
+    cursor:pointer;
+}
+
+
