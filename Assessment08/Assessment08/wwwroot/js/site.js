@@ -2,23 +2,28 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
-
-
-var intervalId;
+var intervalId1;
+var intervalId2;
 function startEffect() {
 
-    intervalId = setInterval(randomPosition, 2000);
+    intervalId1 = setInterval(randomPosition, 2000);
+    intervalId2 = setInterval(backgroundChange, 100);
 
     document.getElementById("start").blur();
 }
 
 function stopEffect() {
 
-    clearInterval(intervalId);
+    clearInterval(intervalId1);
+    clearInterval(intervalId2);
 
     document.getElementById("stop").blur();
 }
 
+function backgroundChange() {
+
+    document.body.style.backgroundColor = getRandomColor();
+}
 function randomPosition() {
     const bubbles = document.querySelectorAll(".bubble");
     bubbles.forEach(function (bubble) {
@@ -30,7 +35,6 @@ function randomPosition() {
         const randomY = Math.random() * maxY;
 
         bubble.style.backgroundColor = getRandomColor();
-        document.body.style.backgroundColor = getRandomColor();
         bubble.style.transform = `translate(${randomX}px, ${randomY}px)`;
     });
 }
