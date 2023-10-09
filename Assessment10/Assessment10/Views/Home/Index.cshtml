@@ -1,0 +1,135 @@
+﻿
+<style>
+    .invoice{
+        border: 2px solid;
+        border-radius: 35px;
+    }
+</style>
+<div class="row">
+    <div class="col-10 offset-1">
+        <div class="card p-4">
+            <div class="card-header">
+                <h1>CHETU RESTAURANT</h1>
+            </div>
+            <div class="card-body">
+                <div class="d-flex justify-content-around">
+                    <div class="form-floating m-2 w-50" id="items">
+                        <select class="form-control border-0 shadow" id="itemsList" >
+                            <option value="">Select Item</option>
+                        </select>
+                        <label class="">Item</label>
+                    </div>
+                    <div class="form-floating m-2" id="quantity">
+                        <input type="number" class="form-control border-0 shadow" id="quantityInput"/>
+                        <label>Quantity</label>
+                    </div>
+                    <div class="form-floating m-2">
+                        <button id="btnAdd" type="button" class="btn btn-info text-light fw-bold">Add Item</button>
+                    </div>
+                </div>
+                <table class="table table-bordered mt-4">
+                    <thead>
+                        <tr>
+                            <th>SNo.</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbl_body">
+
+                    </tbody>
+                    <tfoot id="footer">
+                        <tr>
+                            <td colspan="3"></td>
+                            <td id="footLabel">TOTAL</td>
+                            <td colspan="2" id="tableTotal" class="text-light bg-dark">0</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div id="empty-cart-message">
+                    Your cart is empty.
+                </div>
+                <div class="text-end mb-2">
+                    <button id="btnBill" type="button" class="btn btn-dark text-light fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal">Generate Bill</button>
+                </div>
+                <div class="card mt-4 " id="Invoice">
+                    <div class="card-body invoice">
+                        <div class="card-header bg-dark text-light">
+                            <h2 class="">Invoice</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between flex-wrap">
+                                <div class="form-group m-2">
+                                    <label class="fw-bold">Name : </label>
+                                    <input id="custName" type="text" class="border-0" readonly />
+                                </div>
+                                <div class="form-group m-2">
+                                    <label class="fw-bold">Date : </label>
+                                    <input id="custDate" type="datetime" class="border-0" readonly />
+                                </div>
+                                <div class="form-group m-2">
+                                    <label class="fw-bold">Bill No : </label>
+                                    <input id="custBillNo" type="text" class="border-0" readonly />
+                                </div>
+                                <div class="form-group m-2">
+                                    <label class="fw-bold">Phone No : </label>
+                                    <input id="custContact" type="text" class="border-0" readonly />
+                                </div>
+                                <div class="text-end">
+                                    <div class="form-group m-2">
+                                        <label class="fw-bold">Total : </label>
+                                        <input id="totalAmount" type="text" class="border-0" readonly />
+                                    </div>
+                                    <div class="form-group m-2">
+                                        <label class="fw-bold">SGST 8% : </label>
+                                        <input id="sgst" type="text" class="border-0" readonly />
+                                    </div>
+                                    <div class="form-group m-2">
+                                        <label class="fw-bold">CGST 6% : </label>
+                                        <input id="cgst" type="text" class="border-0" readonly />
+                                    </div>
+                                    <div class="form-group m-2">
+                                        <label class="fw-bold">Total Payable Amount : </label>
+                                        <input id="totalPayAmount" type="text" class="border-0" readonly />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-floating py-2 col-12">
+                        <input type="text" class="form-control border-0 shadow" id="txtName" />
+                        <label class="ms-3">Your Name</label>
+                    </div>
+                    <div class="form-floating py-2 col-12">
+                        <input type="text" class="form-control border-0 shadow"id="txtContact" />
+                        <label class="ms-3">Contact</label>
+                    </div>
+                    <button id="btnDetail" type="button" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="~/js/custom.js"></script>
