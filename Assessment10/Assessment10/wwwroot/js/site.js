@@ -3,6 +3,8 @@
 
 // Write your JavaScript code.
 
+let daysList = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
 function isEmpty() {
     if (tableBody.rows.length == 0 && rowNumber == 1) {
         document.getElementById("footer").style.display = "none";
@@ -135,7 +137,8 @@ function fillDetail() {
 
     document.getElementById("custName").value = name;
     document.getElementById("custContact").value = contact;
-    document.getElementById("custDate").value = new Date().toISOString().slice(0, 19).replace("T", " ");
+    document.getElementById("custDate").value = new Date().toLocaleString() +" "+ daysList[new Date().getDay()];
+    //document.getElementById("custDate").value = new Date().toISOString().slice(0, 19).replace("T", " ");
     document.getElementById("custBillNo").value = Math.floor(Math.random() * 1000000);
 
     const sgst = total / 100 * 8;
@@ -143,7 +146,6 @@ function fillDetail() {
     const totalPayAmount = total + sgst + cgst;
     document.getElementById("totalAmount").value = `₹${ total.toFixed(2)}`;
     document.getElementById("sgst").value = `₹${sgst.toFixed(2)}`;
-    document.getElementById("custDate").value = new Date().toISOString().slice(0, 19).replace("T", " ");
     document.getElementById("cgst").value = `₹${cgst.toFixed(2)}`;
     document.getElementById("totalPayAmount").value = `₹${totalPayAmount.toFixed(2)}`;
 }

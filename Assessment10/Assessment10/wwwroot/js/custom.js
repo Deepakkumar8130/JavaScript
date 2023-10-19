@@ -1,4 +1,5 @@
 
+
 var itemList = document.getElementById("itemsList");
 var quantityInput = document.getElementById("quantityInput");
 const tableBody = document.getElementById("tbl_body");
